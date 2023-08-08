@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Tính điểm sinh viên</title>
 </head>
 <body>
-
-
+<script>
+     chemistry = +prompt('Nhap vao điểm hóa')
+     physics = +prompt('nhập vào điểm vật lý')
+     biologi= +prompt('nhập vào điểm sinh')
+     TB = (chemistry+physics+biologi)/3
+     Tong = chemistry+physics+biologi
+     document.writeln('Diem trung binh:'+TB)
+     document.write("<br/>")
+     document.write('Diem tong:' +Tong)
+</script>
 </body>
 </html>

@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
 </head>
 <body>
-$END$
+<table>
+    <tr>
+    <td><input type="number" id="number1" placeholder="Nhập vào số thứ nhất "></td>
+    <td><input type="number" id="number2" placeholder="Nhập vào số thứ hai "></td>
+    <td><button onclick="addition()">Cộng</button></td>
+    <td><button onclick="subtraction()">Trừ</button></td>
+    <td><button onclick="multiplication()">Nhân</button></td>
+    <td><button onclick="division()">Chia</button></td>
+    </tr>
+</table>
+<h2>Result:</h2>
+<p id="ketqua">Kết quả là:</p>
+<script>
+ function addition(){
+     let a = parseInt(document.getElementById("number1").value);
+     let b = parseInt(document.getElementById("number2").value) ;
+     Tong=a+b
+     document.getElementById("ketqua" ).innerHTML ="Kết quả là: "+ Tong
+ }
+ function subtraction(){
+     let c = parseInt(document.getElementById("number1").value);
+     let d = parseInt(document.getElementById("number1").value);
+     Hieu=c-d
+     document.getElementById("ketqua").innerHTML ="Kết quả là: " +Hieu
+ }
+ function multiplication(){
+     let e = parseInt(document.getElementById("number1").value);
+     let f = parseInt(document.getElementById("number2").value);
+     Tich=e*f
+     document.getElementById("ketqua").innerHTML = "Kết quả là: " +Tich
+ }
+ function division(){
+     let g = parseInt(document.getElementById("number1").value);
+     let h = parseInt(document.getElementById("number2").value);
+     Thuong=g/h
+     document.getElementById("ketqua").innerHTML = "Kết quả là: "
+ }
+</script>
+
 </body>
 </html>

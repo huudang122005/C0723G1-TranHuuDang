@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
 </head>
 <body>
-$END$
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+    </tr>
+    <tr>
+        <td><input type="number" id="Amount"></td>
+        <td>
+            <select id="From">
+                <option>VND</option>
+                <option>USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="To">
+                <option>USD</option>
+                <option>VND</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="convertMoney()">Convert</button>
+        </td>
+    </tr>
+</table>
+<p id="ketqua"></p>
+
+<script>
+    function convertMoney() {
+        let Amount = document.getElementById("Amount").value;
+        let From = document.getElementById("From").value;
+        let To = document.getElementById("To").value;
+        let Covert;
+        if (From == "USD" && To == "VND") {
+            Covert = Amount * 23000
+        } else if (From == "USD" && To == "USD") {
+            covert = Amount
+        } else if (From == "VND" && To == "USD") {
+            Covert = Amount / 23000
+        } else {
+            Covert = Amount
+        }
+        document.getElementById("ketqua").innerText = 'Tui rảnh tui ngồi chuyển từ: ' + Amount + ' ' + From + ' sang   ' + Covert + ' ' + To
+    }
+</script>
 </body>
 </html>
