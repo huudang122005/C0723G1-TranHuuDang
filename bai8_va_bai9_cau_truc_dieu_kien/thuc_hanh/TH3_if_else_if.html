@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập hệ thống</title>
+</head>
+<body>
+<script>
+    let nhapTenVao = prompt('nhập tên vào đây:');
+    if (nhapTenVao ==='Admin') {
+        let pass = prompt('Mật khẩu');
+        if (pass = 'TheMaster') {
+            alert("Welcome");
+        }else if (pass == null ){
+            alert("Canceled")
+        }else {
+            alert('Wrong password')
+        }
+    }
+    if (nhapTenVao==='null'){
+        alert('canceled')
+    }else {
+        alert("I don’t know you ")
+    }
+</script>
+</body>
+</html>

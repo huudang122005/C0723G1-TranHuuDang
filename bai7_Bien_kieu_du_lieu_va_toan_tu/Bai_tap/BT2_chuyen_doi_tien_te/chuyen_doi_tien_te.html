@@ -12,15 +12,15 @@
         <td>To Currency</td>
     </tr>
     <tr>
-        <td><input type="number" id="Amount"></td>
+        <td><input type="number" id="amount"></td>
         <td>
-            <select id="From">
+            <select id="from">
                 <option>VND</option>
                 <option>USD</option>
             </select>
         </td>
         <td>
-            <select id="To">
+            <select id="fo">
                 <option>USD</option>
                 <option>VND</option>
             </select>
@@ -34,18 +34,18 @@
 
 <script>
     function convertMoney() {
-        let Amount = document.getElementById("Amount").value;
-        let From = document.getElementById("From").value;
-        let To = document.getElementById("To").value;
+        let amount = document.getElementById("amount").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
         let Covert;
-        if (From == "USD" && To == "VND") {
-            Covert = Amount * 23000
-        } else if (From == "USD" && To == "USD") {
-            covert = Amount
-        } else if (From == "VND" && To == "USD") {
-            Covert = Amount / 23000
+        if (from == "USD" && to == "VND") {
+            covert = amount * 23000
+        } else if (from == "USD" && to == "USD") {
+            covert = amount
+        } else if (from == "VND" && to == "USD") {
+            covert = amount / 23000
         } else {
-            Covert = Amount
+            covert = amount
         }
         document.getElementById("ketqua").innerText = 'Tui rảnh tui ngồi chuyển từ: ' + Amount + ' ' + From + ' sang   ' + Covert + ' ' + To
     }
