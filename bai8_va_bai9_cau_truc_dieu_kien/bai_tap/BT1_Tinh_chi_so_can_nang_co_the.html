@@ -23,10 +23,9 @@
 <script>
 
     function kiemTra(){
-        let weight = document.getElementById('Number1');
-        let height = document.getElementById('Number2');
+        let weight = document.getElementById('Number1').value;
+        let height = document.getElementById('Number2').value;
         let bmi = weight/( height*2 );
-
         if (bmi < 18.5){
             document.getElementById('result').innerText = "Underweight";
         }else if(bmi < 25.0){
