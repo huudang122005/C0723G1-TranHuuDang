@@ -4,46 +4,72 @@
     <meta charset="UTF-8">
     <title>Máy tính đơn giản</title>
 </head>
+<style>
+    button {
+        width: 50px;
+        height:50px;
+    }
+</style>
 <body>
-<table>
-    <form>
-        <input id="input" type="text">
-    </form>
+<table border="1" cellpadding="0" cellspacing="20px">
+   <tr>
+   <td colspan="4"style="text-align: left"; height="50px    ">
+       <span id="result"></span>
+   </td>
+   </tr>
     <tr>
-        <td><button value="1" onclick="inputValue(this.value)" style="width: 50px">1</button></td>
-        <td><button value="2" onclick="inputValue(this.value)" >2</button></td>
-        <td><button value="3" onclick="inputValue(this.value)">3</button></td>
-        <td><button value="+" onclick="inputValue(this.value)">+</button></td>
+        <td><button type="button" onclick="calculator('1')">1</button></td>
+        <td><button type="button" onclick="calculator('2')">2</button></td>
+        <td><button type="button" onclick="calculator('3')">3</button></td>
+        <td><button type="button" onclick="calculator('+')">+</button></td>
     </tr>
     <tr>
-        <td><button value="5" onclick="inputValue(this.value)" style="width: 50px">4</button></td>
-        <td><button value="5" onclick="inputValue(this.value)">5</button></td>
-        <td><button value="6" onclick="inputValue(this.value)">6</button></td>
-        <td><button value="-" onclick="inputValue(this.value)"  >-</button></td>
+        <td><button type="button" onclick="calculator('4')">4</button></td>
+        <td><button type="button" onclick="calculator('5')">5</button></td>
+        <td><button type="button" onclick="calculator('6')">6</button></td>
+        <td><button type="button" onclick="calculator('-')">-</button></td>
     </tr>
     <tr>
-        <td><button value="7" onclick="inputValue(this.value)" style="width: 50px">7</button></td>
-        <td><button value="8" onclick="inputValue(this.value)">8</button></td>
-        <td><button value="9" onclick="inputValue(this.value)">9</button></td>
-        <td><button value="*" onclick="inputValue(this.value)" >*</button></td>
+        <td><button type="button" onclick="calculator('7')">7</button></td>
+        <td><button type="button" onclick="calculator('8')">8</button></td>
+        <td><button type="button" onclick="calculator('9')">9</button></td>
+        <td><button type="button" onclick="calculator('*')">X</button></td>
     </tr>
     <tr>
-        <td><button type="button" onclick="xoa()" style="width: 50px">AC</button></td>
-        <td><button value="0" onclick="inputValue(this.value)">0</button></td>
-        <td><button value="=" onclick="result()">=</button></td>
-        <td><button value="/" onclick="inputValue(this.value)">/</button></td>
+        <td><button type="button" onclick="calculator('c')">C</button></td>
+        <td><button type="button" onclick="calculator('0')">0</button></td>
+        <td><button type="button" onclick="calculator('=')">=</button></td>
+        <td><button type="button" onclick="calculator('/')">/</button></td>
     </tr>
 </table>
 <script>
-let input = document.getElementById('input');
-function inputValue(value) {
-    input.value += value
+function calculator(x){
+    let result = document.getElementById("result").innerText;
+switch (x){
+    case '0':
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+    case '7':
+    case '8':
+    case '9':
+    case '+':
+    case '-':
+    case '*':
+    case '/':
+        result = result+x
+        break;
+    case 'c' :
+        result = '';
+        break;
+    case '=':
+        result = eval(result);
+        break;
 }
-function xoa(){
-input.value = " "
-}
-function result(){
-   input.value = eval(input.value);
+document.getElementById("result").innerText = result;
 }
 </script>
 </body>
