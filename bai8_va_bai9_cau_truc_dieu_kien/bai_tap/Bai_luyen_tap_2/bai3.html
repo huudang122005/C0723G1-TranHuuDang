@@ -6,9 +6,14 @@
 </head>
 <body>
 <script>
-    let doDaiCanh = +prompt('nhập vào độ dài của cạnh: ');
-    let dienTich = doDaiCanh*doDaiCanh;
-    document.write('diện tích hình vuông là: ' +dienTich);
+    let a = +prompt('Nhập vào độ dài cạnh: ');
+    let s = a * a
+    if (a > 0) {
+        alert("diện tích hình vuông là: " + s)
+    } else {
+        alert('Nhập độ dài cạnh là số dương.')
+    }
+
 </script>
 </body>
 </html>

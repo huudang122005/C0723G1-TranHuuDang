@@ -6,10 +6,14 @@
 </head>
 <body>
 <script>
-    let chieuRong = +prompt('nhập vào chiều rộng: ');
-    let chieuDai = +prompt('nhập vào dài: ');
-    let dienTich = chieuRong*chieuDai;
-    document.write('diện tích hình chừ nhật là : ' +dienTich );
+    let a = +prompt('Nhập vào độ dài cạnh a: ');
+    let b = +prompt('Nhập vào độ dài cạnh b: ');
+    let s = a * b;
+    if (a > 0 && b > 0) {
+        alert("Diện tích hình chữ nhật là: " + s);
+    } else {
+        alert("Nhập độ dài 2 cạnh là số dương");
+    }
 </script>
 </body>
 </html>

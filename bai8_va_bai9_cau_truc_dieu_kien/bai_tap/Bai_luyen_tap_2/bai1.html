@@ -5,10 +5,43 @@
     <title>chuyển độ C sang độ F</title>
 </head>
 <body>
+<table>
+    <tr>
+        <th>Nhiệt độ</th>
+        <th>From</th>
+        <th>To</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="nhietDo"></td>
+        <td>
+            <select id="from">
+                <option value="C">C</option>
+                <option value="F">F</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value="F">F</option>
+                <option value="C">C</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="ketQua()">Convert</button>
+        </td>
+    </tr>
+</table>
+<p id="result"></p>
 <script>
-    let doC= +prompt('nhập vào số độ C bạn muối đổi: ');
-    let doF = doC * 9 / 5 + 32;
-    document.write(" Độ F:" +doF);
+    function ketQua() {
+        let amount = document.getElementById('nhietDo').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+        if (from == "C" && to == "F") {
+            document.getElementById('result').innerHTML = amount * (9 * amount / 5 + 32) + "F"
+        } else if (to == "C" && from == "F") {
+            document.getElementById('result').innerHTML = (amount - 32) * 5 / 9 + "C"
+        }
+    }
 </script>
 
 </body>

@@ -6,9 +6,19 @@
 </head>
 <body>
 <script>
-        let soPhutSuDung = +prompt('nhập vào số phút sử dụng điện thoại : ');
-        let tienCuoc =soPhutSuDung*1000
-        document.write('số tiền cước phải trả là :'+tienCuoc +'đồng');
+    let soPhutSuDung = +prompt('nhập vào số phút sử dụng điện thoại : ');
+    let tienCuoc
+    if (soPhutSuDung < 1000) {
+        tienCuoc = soPhutSuDung * 400;
+        alert("tiền cước phải trả là " + tienCuoc);
+    } else if (soPhutSuDung < 2000) {
+        tienCuoc = soPhutSuDung * 350;
+        alert("tiền cước phải trả là " + tienCuoc);
+    } else {
+        tienCuoc = soPhutSuDung * 320;
+        alert("tiền cước phải trả là " + tienCuoc);
+    }
+
 </script>
 </body>
 </html>

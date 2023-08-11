@@ -7,8 +7,13 @@
 <body>
 <script>
     let soPhutSuDungDien = +prompt('Nhập vào số phút bạn sử dụng điện: ');
-    let tienDien = soPhutSuDungDien*100;
-    document.write('Tiền điện của bạn là :' +tienDien);
+    let tienDien = soPhutSuDungDien * 100;
+    if (soPhutSuDungDien > 0) {
+        alert('số tiền điện phải trả là : ' + tienDien);
+    } else {
+        alert("Nhập lại số phút")
+    }
+
 </script>
 </body>
 </html>

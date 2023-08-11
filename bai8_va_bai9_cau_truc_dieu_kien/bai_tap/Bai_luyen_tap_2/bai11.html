@@ -7,8 +7,19 @@
 <body>
 <script>
     let tienLuong = +prompt('nhập vào tiền lương của bạn :');
-    let thuePhaiTra = tienLuong * 10/100;
-    document.write('thuê phải trả là :' +thuePhaiTra);
+    if (tienLuong > 0 && tienLuong <= 5000000) {
+        let tienThue = tienLuong * 0.05;
+        alert("Thuế thu nhập cá nhân của bạn là: " + tienThue);
+    } else if (tienLuong < 10000000) {
+        tienThue = tienLuong * 0.1;
+        alert("Thuế thu nhập cá nhân của bạn là: " + tienThue);
+    } else if (tienLuong < 20000000) {
+        tienThue = tienLuong * 0.15;
+        alert("Thuế thu nhập cá nhân của bạn là: " + tienThue);
+    } else {
+        tienThue = tienLuong * 0.2;
+        alert("Thuế thu nhập cá nhân của bạn là: " + tienThue);
+    }
 </script>
 
 </body>

@@ -9,8 +9,10 @@
     let tienVay = +prompt('nhập vào số tiền đã vay :');
     let soThangVay = +prompt('nhập vào số tháng đã vay :');
     let soPhanTramLaiSuat = +prompt('nhập vào số phần trăm lãi xuất ngân hàng :');
-    let laiPhaiTra = tienVay * soPhanTramLaiSuat * (soThangVay*30)/360;
-    document.write('số tiền lãi phải trả là :' +laiPhaiTra);
+    let laiPhaiTra = tienVay * soPhanTramLaiSuat * (soThangVay * 30) / 360;
+    if (tienVay > 0 && soThangVay > 0 && soPhanTramLaiSuat > 0) {
+        alert('tiền lãi phải trả là :' + laiPhaiTra);
+    }
 </script>
 </body>
 </html>

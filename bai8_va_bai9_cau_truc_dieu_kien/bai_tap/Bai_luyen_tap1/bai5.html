@@ -9,11 +9,13 @@
     let diemKiemTra = +prompt('Điểm bài kiểm tra là :');
     let diemGiuaKi = +prompt('Điểm thi giữa kì là : ');
     let diemCuoiKi = +prompt('điểm thi cuối kì là :');
-    let tongDiem = (diemKiemTra+diemGiuaKi+diemCuoiKi)/3
-    if(tongDiem>5){
-        alert('bạn học được')
-    }else {
-        alert('bạn học ngu')
+    let diemTrungBinh = (diemKiemTra + diemGiuaKi + diemCuoiKi) / 3
+    if (diemTrungBinh >= 8 && diemTrungBinh <= 10) {
+        alert('bạn xếp loạn giỏi');
+    } else if (diemTrungBinh >= 5) {
+        alert('bạn xếp loại khá');
+    } else {
+        alert('bạn xếp loại trung bình');
     }
 </script>
 </body>

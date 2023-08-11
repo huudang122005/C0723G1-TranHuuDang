@@ -7,19 +7,19 @@
 <body>
 <p> pt có dạng : aX^2+bX+c=0 </p>
 <script>
-    let a =+prompt('nhập vào số a:');
-    let b =+prompt('nhập vào số b:');
-    let c =+prompt('nhập vào số c:');
-    let denta = b*b-4*a*c
-    let x1 = (-b + Mazth.sqrt(denta))/(2*a);
-    let x2 = (-b - Mazth.sqrt(denta))/(2*a);
-    let x3 = -b/a
-    if (denta < 0 ){
+    let a = +prompt('nhập vào số a:');
+    let b = +prompt('nhập vào số b:');
+    let c = +prompt('nhập vào số c:');
+    let denta = b * b - 4 * a * c
+    let x1 = (-b + Math.sqrt(denta)) / (2 * a);
+    let x2 = (-b - Math.sqrt(denta)) / (2 * a);
+    let x3 = -b / a
+    if (denta < 0) {
         alert('phương trình vô nghiệm');
-    }else if (denta =0){
-        alert('phương trình có nghiệm kép :' +x3);
-    }else {
-        alert('phương trình có 2 nghiệp :' +'x1= '+x1+'x2='+x2 );
+    } else if (denta = 0) {
+        alert('phương trình có nghiệm kép :' + x3);
+    } else {
+        alert('phương trình có 2 nghiệp :' + 'x1= ' + x1 + 'x2=' + x2);
     }
 </script>
 </body>

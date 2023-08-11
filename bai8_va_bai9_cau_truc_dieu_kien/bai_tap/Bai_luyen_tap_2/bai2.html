@@ -5,11 +5,43 @@
     <title>Đổi từ mét sang feet</title>
 </head>
 <body>
+<table>
+    <tr>
+        <th>Độ dài</th>
+        <th>From</th>
+        <th>To</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="doDai"></td>
+        <td>
+            <select id="from">
+                <option value="F">Feet</option>
+                <option value="M">Met</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value="M">Met</option>
+                <option value="F">Feet</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="ketQua()">Convert</button>
+        </td>
+    </tr>
+</table>
+<p id="result"></p>
 <script>
-    let soMetNhapVao=+prompt('nhập vào số mét bạn muốn chuyển :');
-    let feet= soMetNhapVao * 3.2808
-    document.write('Feet =' +feet );
-
+    function ketQua() {
+        let amount = document.getElementById('doDai').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+        if (from == "F" && to == "M") {
+            document.getElementById('result').innerHTML = (amount / 3.2808) + "M"
+        } else if (from == "M" && to == "F") {
+            document.getElementById('result').innerHTML = (amount * 3.2808) + "ft"
+        }
+    }
 </script>
 </body>
 </html>

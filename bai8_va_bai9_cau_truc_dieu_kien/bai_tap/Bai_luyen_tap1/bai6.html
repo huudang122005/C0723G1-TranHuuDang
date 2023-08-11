@@ -7,8 +7,11 @@
 <body>
 <script>
     let doanhThu = +prompt('nhap vao doanh thu cua ban:');
-    let tienHoaHong = doanhThu*(3/100);
-   document.write('tiền hoa hồng của bạn là :' +tienHoaHong + 'Đồng');
+    if (doanhThu > 1000) {
+        alert('Tiền hoa hồng nhận được là :' + doanhThu * 0.3);
+    } else if (doanhThu < 1000) {
+        alert('Tiền hoa hồng nhận được là :' + doanhThu * 0.1);
+    }
 </script>
 </body>
 </html>
