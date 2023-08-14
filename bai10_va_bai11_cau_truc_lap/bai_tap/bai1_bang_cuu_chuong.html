@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bảng cửu Chương</title>
 </head>
 <body>
-$END$
+<h1> Bảng cửu chương</h1>
+<table border="1" cellSpacing="0px" cellPadding="20px" width="300">
+    <script>
+        //khai bao bien
+
+        for (let i = 1; i <= 10; i++) {
+            for (let j = 1; j <= 10; j++) {
+                let u = i * j
+                document.write("<td>" + j + "*" + i + "=" + u + "</td>")
+            }
+            document.write("<tr>")
+        }
+    </script>
+</table>
 </body>
 </html>

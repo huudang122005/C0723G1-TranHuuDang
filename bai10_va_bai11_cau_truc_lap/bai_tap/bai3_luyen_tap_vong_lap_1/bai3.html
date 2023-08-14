@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>hiển thị 20 số trong dãy fibonacci</title>
 </head>
 <body>
-$END$
+<script>
+    let a = 0;
+    let b = 1;
+    let c;
+    for (let i = 0; i <= 20; i++) {
+        c = a + b;
+        document.write(a + '<br>');
+        a = b;
+        b = c;
+    }
+</script>
 </body>
 </html>

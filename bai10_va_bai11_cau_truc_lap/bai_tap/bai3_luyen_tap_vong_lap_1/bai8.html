@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>trò chơi</title>
 </head>
 <body>
-$END$
+<button onclick="clickVao()">Chơi</button>
+<script>
+    function clickVao(){
+        let doan = +prompt('nhập vào khoảng muốn đoán.');
+        let randomNumber = Math.floor(Math.random() * doan);
+        let count = 0;
+        do {
+            let number = +prompt("số muốn đoán:");
+            if (number === randomNumber){
+                alert('bạn đoán trúng');
+                break;
+            }else if (number > randomNumber){
+                alert("số bạn đoán lớn hơn");
+            }else{
+                alert('số bạn đoán nhỏ hơn');
+            }
+            count+=1;
+            if (count >3){
+                alert("bạn đã hết sô lượt đoan");
+                break;
+            }
+        }while (true);
+    }
+</script>
 </body>
 </html>

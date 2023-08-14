@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>hiển thị 20 số nguyên tố đầu tiên</title>
 </head>
 <body>
-$END$
+<script>
+    let count = 0;
+    let count1 = 0;
+    let number = 2;
+    while (count1 <= 20) {
+
+        for (let i = 1; i <= number; i++) {
+            if (number % i === 0) {
+                count = count + 1;
+            }
+        }
+        if (count === 2) {
+            console.log(number);
+            count1 = count1 + 1;
+        }
+        number++;
+    }
+
+
+</script>
 </body>
 </html>
