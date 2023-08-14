@@ -6,24 +6,31 @@
 </head>
 <body>
 <script>
+    let n = +prompt('nhập vào số n')
     let count = 0;
-    let count1 = 0;
-    let number = 2;
-    while (count1 <= 20) {
+    let i = 2;
 
-        for (let i = 1; i <= number; i++) {
-            if (number % i === 0) {
-                count = count + 1;
+    while (count < n) {
+        let checkSNT = 0;
+        for (let j = 2; j <= i-1; j++) {
+            if (i % j === 0) {
+                checkSNT++;
             }
         }
-        if (count === 2) {
-            console.log(number);
-            count1 = count1 + 1;
+        if (checkSNT === 0) {
+            document.write(i + '<br>')
+            count++;
         }
-        number++;
+        i++
     }
 
 
+    // for (let i = 1; i <= n/ 2;i++ ){
+    //
+    //     if (n % i == 0){
+    //         document.write(i+'<br>')
+    //     }
+    // }
 </script>
 </body>
 </html>
