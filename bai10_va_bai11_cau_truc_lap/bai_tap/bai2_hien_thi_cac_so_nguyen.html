@@ -11,26 +11,20 @@
     let i = 2;
 
     while (count < n) {
-        let checkSNT = 0;
-        for (let j = 2; j <= i-1; j++) {
+        let checkSNT = true;
+        for (let j = 2; j <= i - 1; j++) {
             if (i % j === 0) {
-                checkSNT++;
+                checkSNT = false;
+                j = i + j;
             }
         }
-        if (checkSNT === 0) {
+        if (checkSNT) {
             document.write(i + '<br>')
             count++;
         }
         i++
     }
 
-
-    // for (let i = 1; i <= n/ 2;i++ ){
-    //
-    //     if (n % i == 0){
-    //         document.write(i+'<br>')
-    //     }
-    // }
 </script>
 </body>
 </html>
