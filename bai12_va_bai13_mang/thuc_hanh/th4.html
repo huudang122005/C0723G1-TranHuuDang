@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [ 5,9,10,22,33,41,2,4,-2,-4,-67]  ;
+    let max = [0];
+    let index = 0 ;
+    for (let i = 0 ; i<numbers.length;i++){
+        if (max < numbers[i]){
+            max = numbers[i]
+            index=i
+        }
+    }
+    alert('max' + max +"at position"+index);
+
+</script>
+</body>
+</html>

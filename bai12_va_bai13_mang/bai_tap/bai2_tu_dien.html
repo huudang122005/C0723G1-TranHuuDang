@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<p>Nhập từ :</p>
+<input type="text" id="value">
+<button onclick="clickDich()"> dịch</button>
+<div id="hienThi"></div>
+<script>
+    function clickDich() {
+        let tiengAnh = ["apple", "lemon", "orange", "grade"];
+        let tiengViet = ["táo", "chanh", "cam", "nho"];
+        let input = document.getElementById("value").value;
+        for (let i = 0; i < tiengAnh.length; i++) {
+            if (input == tiengAnh[i]) {
+                document.getElementById("hienThi").innerHTML = tiengViet[i];
+                break;
+            } else {
+                document.getElementById("hienThi").innerHTML = " ko tìm thấy"
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt4</title>
+</head>
+<body>
+<script>
+    let nhapSo = prompt('nhập vào một chuỗi ');
+    let arr = nhapSo.split(' ');
+    let soDau = 0;
+    let soCuoi = arr.length - 1;
+    for (let i = 0; i < arr.length; i++) {
+        if (soDau < soCuoi) {
+            let b = arr[soDau];
+            arr[soDau] = arr[soCuoi];
+            arr[soCuoi] = b
+            soDau++
+            soCuoi--
+        }
+    }
+    document.write("Số bạn nhập ban đầu là: " + nhapSo + "<br>" + "Số sau khi đảo ngược là: " + arr);
+</script>
+</body>
+</html>

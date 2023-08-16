@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH1</title>
+</head>
+<body>
+<input type="text" id="input">
+<button onclick="clickVaoAdd()">Add</button>
+
+<button onclick="clickVaoDisplay()">Display</button>
+<div id="theDiv"></div>
+
+<script>
+    let x = 0;
+    let array = [];
+
+    function clickVaoAdd() {
+        array[x] = document.getElementById('input').value
+        alert("Element:" + array[x] + "added at index" + x);
+        x++;
+        document.getElementById("input").value = "";
+    }
+
+    function clickVaoDisplay() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            e = e + "Element" + i + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("theDiv").innerHTML = e;
+    }
+</script>
+</body>
+</html>

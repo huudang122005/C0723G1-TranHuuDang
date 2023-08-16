@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập vào một dãy chữ");
+    let chuHoa = "ZXCVBNMASDFGHJKLQWERTYUIOP";
+    let chuThuong = "zxcvbnmasdfghjklqwertyuiop";
+    let result = [];
+    for (let i = 0; i < a.length; i++) {
+        if (chuHoa.indexOf(a[i]) !== -1) {
+            result.push(a[i].toLowerCase());
+        } else if (chuThuong.indexOf(a[i]) !== -1) {
+            result.push(a[i].toUpperCase());
+        } else {
+            result.push(a[i]);
+        }
+    }
+    document.write(result.join(""));
+</script>
+</body>
+</html>
