@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>bt8</title>
 </head>
 <body>
-
+<script>
+    let arr = [1, 2, 5, 3, 7, 4, 11, 23, 43, 32];
+    let min;
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                min = arr[i];
+                arr[i] = arr[j];
+                arr[j] = min;
+            }
+        }
+    }
+    document.write(arr);
+</script>
 </body>
 </html>
