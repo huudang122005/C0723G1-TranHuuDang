@@ -6,8 +6,25 @@
 </head>
 <body>
 <script>
-    let str1 = prompt("nhập vào chuỗi thứ nhất");
-    let str2 = prompt("nhập vào chuỗi thứ hai");
+    let str1 = prompt("nhập vào chuỗi thứ nhất:");
+    let str2 = prompt("nhập vào chuỗi thứ hai:");
+    let result= false ;
+    if (str1.length===str2.length){
+        for( let i=0;i<str1.length;i++){
+            if (str1[i]===str2[i]){
+                result = true;
+            }else {
+                result = false;
+            }
+        }
+    }else {
+        result = false ;
+    }
+    if (result){
+        document.write("Hai chuỗi giống nhau");
+    }else {
+        document.write("Hai chuỗi khác nhau");
+    }
 </script>
 </body>
 </html>
