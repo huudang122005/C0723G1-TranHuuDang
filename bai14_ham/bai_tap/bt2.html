@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi meter sang feet và ngược lại</title>
+</head>
+<body>
+<script>
+
+    let feet = +prompt("nhập vào số feet muốn đổi: ");
+    let meter = +prompt("nhập vào số meter muốn đổi: ");
+
+    function chuyenDoiMsangFt(meter) {
+        meter = feet * 3.28
+        return meter;
+    }
+
+    function chuyenDoiFtsangM(feet) {
+        feet = meter / 3.28
+        return feet;
+    }
+
+    chuyenDoiMsangFt(meter);
+    document.write(meter + " met " + " bằng " + chuyenDoiMsangFt(feet) + " Ft " + "<br>");
+    chuyenDoiFtsangM(feet)
+    document.write(feet + " ft " + " bằng " + chuyenDoiFtsangM(meter) + " met ");
+</script>
+</body>
+</html>
