@@ -6,7 +6,15 @@
 </head>
 <body>
 <script>
-
+    let arr = prompt("nhập vào mảng ký tự");
+    let str = arr.split(',');
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === '-') {
+            str[i] = '_';
+        }
+    }
+    let result = "Mảng ký tự sau khi thay thế: " + str.join(",");
+    document.write(result);
 </script>
 </body>
 </html>
