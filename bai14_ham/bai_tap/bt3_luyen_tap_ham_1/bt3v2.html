@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt4</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt("Nhập vào số thứ 1: ");
+    let number2 = +prompt("Nhập vào số thứ 2: ");
+
+    function checkNumber(a, b) {
+        if (a < b) {
+            return "Số thứ nhất nhỏ hơn số thứ hai";
+        } else {
+            let sum = a + b;
+            return sum;
+        }
+    }
+
+    alert(checkNumber(number1, number2));
+</script>
+</body>
+</html>
