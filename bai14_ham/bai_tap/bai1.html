@@ -8,12 +8,13 @@
 <script>
     let check = +prompt("nhập vào một số để check");
     isPrime(check);
+
     function isPrime(check) {
         let flag = false;
         if (check < 2) {
             alert(check + " ko phải là số nguyên tố");
         } else {
-            for (let i = 1; i < check-1 ; i++) {
+            for (let i = 1; i < check - 1; i++) {
                 if (check % i === 0) {
                     flag = false;
                 } else {

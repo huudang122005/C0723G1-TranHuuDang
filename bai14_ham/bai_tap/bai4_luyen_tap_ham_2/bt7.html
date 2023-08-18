@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bt7</title>
 </head>
 <body>
-$END$
+<script>
+    let number1 = +prompt("nhập vào số thứ nhất ");
+    let number2 = +prompt("nhập vào số thứ hai ");
+    let temp;
+
+    function doiCho(a, b) {
+        temp = a;
+        a = b;
+        b = temp;
+        return [a, b]
+    }
+
+    document.write("Trước khi đổi chỗ hai số có thử tự là " + number1 + " , " + number2 + "</br>")
+    document.write("Sau khi đổi chỗ là " + doiCho(number1, number2));
+</script>
 </body>
 </html>

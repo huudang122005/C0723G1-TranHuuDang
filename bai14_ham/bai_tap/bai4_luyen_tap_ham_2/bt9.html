@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bt9</title>
 </head>
 <body>
-$END$
+<script>
+    let arr = ["a", "b", "c", "d", "a", "g", "g", "h"];
+    let input = prompt("nhập vào một kí tự bất kì");
+    function kiemTra(input) {
+        let cnt = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (input === arr[i]) {
+                cnt++;
+            }
+        }if(cnt>0){
+            return cnt;
+        }else {
+            return "-1";
+        }
+    }
+   document.write("số lần xuât hiện là " + kiemTra(input))
+</script>
 </body>
 </html>

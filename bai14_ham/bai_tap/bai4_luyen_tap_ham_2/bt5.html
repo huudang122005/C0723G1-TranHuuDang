@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bt5</title>
 </head>
 <body>
-$END$
+<script>
+    let number1 = +prompt('nhập vào một số nguên đầu tiên');
+    let number2 = +prompt('nhập vào một số nguyên thứ hai ');
+    let number3 = +prompt('nhập vào một số nguyên cuối cùng');
+
+    function giaTriNhoNhat() {
+        if (number1 < number2 && number1 < number3) {
+            alert(number1 + " là số nhỏ nhất ");
+        } else if (number2 < number1 && number2 < number3) {
+            alert(number2 + " là số nhỏ nhất ");
+        } else {
+            alert(number3 + " là số nhỏ nhất ");
+        }
+    }
+
+    giaTriNhoNhat();
+</script>
 </body>
 </html>

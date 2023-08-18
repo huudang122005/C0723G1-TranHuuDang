@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bt4</title>
 </head>
 <body>
-$END$
+<script>
+    let input = prompt("nhập vào các kí tự bất kì");
+
+    function kiemTra() {
+        if (isNaN(input) === false) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    document.write(kiemTra(input))
+</script>
 </body>
 </html>
