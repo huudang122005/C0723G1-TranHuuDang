@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dien thoai</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(name, battery, draft, inbox, outbox, status) {
+            this.name = name;
+            this.battery = battery;
+            this.inbox = inbox;
+            this.outbox = outbox;
+            this.status = status;
+        }
+        checkStatus() {
+            if (this.status === "ON") {
+                alert("Dien thoai dang bat")
+            } else {
+                alert("Dien thoai dang tat")
+            }
+            this.battery--
+        }
+        sendMes(phone) {
+            if (this.status === "ON") {
+                let outbox = prompt("Nhap tin nhan can gui");
+                let inbox = prompt("đây là tin nhan gui den");
+                this.outbox.push(outbox);
+                phone.inbox.push(inbox);
+                this.battery--
+            } else {
+                alert("Ban can bat dien thoai")
+            }
+        }
+        checkOutbox() {
+            if (this.status === "ON") {
+                document.write("Hop thu di: " + this.outbox + "<br>")
+                this.battery--
+            } else {
+                alert("Ban can bat dien thoai")
+            }
+        }
+        checkInbox() {
+            if (this.status === "ON") {
+                document.write("Hop thu den: " + this.inbox + "<br>")
+                this.battery--
+            } else {
+                alert("Ban can bat dien thoai")
+            }
+        }
+        checkInfo() {
+            if (this.status === "ON") {
+                document.write("Name: " + this.name + " Battery: " + this.battery + " %<br>")
+                this.battery--
+            } else {
+                alert("Ban can bat dien thoai")
+            }
+        }
+    }
+    let iphone = new Mobile("iphone 25", 50, [], [], [], "ON");
+    let samsung = new Mobile("Samsung galaxy pro vip của thầy Phương", 50, [], [], [], "ON");
+    iphone.checkStatus()
+    iphone.checkInfo()
+    iphone.sendMes(samsung)
+    iphone.checkOutbox()
+    samsung.checkInbox()
+    iphone.checkInfo()
+
+</script>
+</body>
+</html>

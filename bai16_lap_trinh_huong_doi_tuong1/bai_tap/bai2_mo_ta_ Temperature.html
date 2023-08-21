@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(doC) {
+            this.doC = doC;
+        }
+
+        doiDoCSangDoF() {
+            return (this.doC * 1.8) + 32;
+        }
+
+        doiDoFSangDoK() {
+            return this.doC + 373.15;
+        }
+    }
+
+    let temperature = new Temperature(15);
+    document.write("Nhiet do K : " + temperature.doiDoFSangDoK() + "</br>" + "Nhiet do F: " + temperature.doiDoCSangDoF());
+</script>
+</body>
+</html>

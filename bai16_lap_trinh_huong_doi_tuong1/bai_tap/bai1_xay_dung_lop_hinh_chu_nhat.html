@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ve hinh chu nhat</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(chieuDai, chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+
+        area() {
+            return this.chieuRong * this.chieuDai;
+        }
+
+        circumference() {
+            return (this.chieuRong + this.chieuDai) * 2;
+        }
+    }
+
+    let rectangle = new Rectangle(4, 3);
+    document.write("Dien tich la: " + rectangle.area() + "</br>" + " Chu vi la: " + rectangle.circumference());
+</script>
+</body>
+</html>
