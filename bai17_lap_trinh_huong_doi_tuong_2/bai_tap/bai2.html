@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        isEmpty() {
+            if (this.weight < 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decrease() {
+            if (this.isEmpty()) {
+                document.write("hết táo");
+            } else {
+                this.weight--
+            }
+        }
+
+        getWeight() {
+            return this.weight
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getGender() {
+            if (this.isMale()) {
+                return "Male"
+            } else {
+                return "Female"
+            }
+        }
+
+         setGender = function (gender) {
+            this.gender = gender
+         }
+
+        checkApple = function (apple) {
+            return apple.isEmpty();
+        }
+
+        eat(apple) {
+            if (apple.getWeight() > 0) {
+                apple.decrease();
+                this.weight++;
+            } else {
+                document.write("Hết táo");
+            }
+        }
+
+        say(String) {
+            console.log(String);
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(String) {
+            this.name = String;
+        }
+
+        getWeight() {
+            return this.weight
+        }
+
+        setWeight(int) {
+            this.weight = int;
+        }
+
+        showInfor() {
+            document.write("Tên: " + this.getName() + "<br>" + "Gender: " + this.getGender() + "<br>" + "Cân nặng: " + this.getWeight() + "<br>")
+        }
+    }
+
+    let apple = new Apple(10);
+    let adam = new Human("Adam", true, 65);
+    let eva = new Human("Eva", false, 80);
+    adam.say("anh iêu yêm" + "<br>")
+    adam.eat(apple);
+    adam.showInfor();
+    document.write("Qua tao con : " + apple.weight + " đv" + "<br>");
+    eva.say("em cũng iêu anh" + "<br>")
+    eva.eat(apple);
+    eva.showInfor();
+    document.write("Qua tao con : " + apple.weight + " đv" + "<br>");
+    adam.say("deadline chưa xong yêu yêu quần què" + "<br>")
+    adam.eat(apple);
+    adam.showInfor();
+    document.write("Qua tao con : " + apple.weight + "đv" + "<br>");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="game"></div>
+<script>
+    function Hero(image, top, left, size, speed, glag) {
+        this.image = image;
+        this.top = top;
+        this.left = left;
+        this.size = size;
+        this.speed = speed;
+        this.glag = glag;
+
+        this.getHeroElement = function () {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+
+        this.moveRight = function () {
+            this.left += this.speed;
+            console.log('ok: ' + this.left);
+        }
+        this.moveDown = function () {
+            this.top += this.speed;
+        }
+        this.moveLeft = function () {
+            this.left -= this.speed;
+        }
+        this.moveUp = function () {
+            this.top -= this.speed;
+        }
+    }
+
+    var hero = new Hero('hhinh-anh-luffy-chibi-thu-the-rat-ngau_055520104.jpg', 20, 20, 200, 100, "right");
+
+    function start() {
+        if (hero.glag === "right") {
+            if (hero.left < window.innerWidth - hero.size - 100) {
+                hero.moveRight();
+            } else {
+                hero.glag = "down";
+            }
+        }
+        if (hero.glag === "down") {
+            if (hero.top < window.innerHeight - hero.size) {
+                hero.moveDown();
+            } else {
+                hero.glag = "left";
+            }
+        }
+        if (hero.glag === "left") {
+            if (hero.left > 20) {
+                hero.moveLeft();
+            } else {
+                hero.glag = "up"
+            }
+        }
+        if (hero.glag === "up") {
+            if (hero.top > 20) {
+                hero.moveUp();
+            }else {
+                hero.glag = "right";
+            }
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, 500);
+    }
+
+    start();
+</script>
+</body>
+</html>

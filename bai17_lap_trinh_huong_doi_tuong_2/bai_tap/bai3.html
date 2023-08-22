@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        turnOn() {
+            if (this.status === true) {
+                document.write("den da bat" + "<br>")
+            }
+        }
+
+        turnOff() {
+            if (this.status === false) {
+                document.write("den da tat" + "<br>");
+            }
+        }
+    }
+
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        setStatus(status) {
+            this.status = status;
+        }
+
+        connectToLamp(electriclamp) {
+            this.lamp = electriclamp;
+        }
+
+        switchOff() {
+            if (this.status === true) {
+                this.status = false;
+                document.write("cong tac da tat" + "<br>");
+                this.lamp.status = this.status
+            }
+        }
+
+        switchOn() {
+            console.log(this.lamp)
+            if (this.lamp.status === false) {
+                this.status = true;
+                document.write("cong tac da bat" + "<br>");
+                this.lamp.status = true;
+            }
+        }
+    }
+
+    let electricLamp = new ElectricLamp(false);
+    let switchButton = new SwitchButton(false, electricLamp);
+    let cnt = 0;
+    while (cnt < 10) {
+        switchButton.switchOn();
+        electricLamp.turnOn();
+        switchButton.switchOff();
+        electricLamp.turnOff();
+        cnt++
+    }
+</script>
+</body>
+</html>
