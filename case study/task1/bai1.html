@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tính lương nhân viên</title>
 </head>
 <body>
-$END$
+<form>
+    <h2>Tính tiền lương</h2>
+    <input id="input">
+    <button onclick="clickVao()">Tinh Luong</button>
+</form>
+<script>
+    function clickVao() {
+        let value1 = document.getElementById("input").value;
+        let thue;
+        let luongRong;
+        if (value1 > 1500000) {
+            thue = value1 * 20 / 100;
+            luongRong = value1 - thue;
+            document.write("Số tiền thuế phải trả là : " + thue + " đồng" + "<br>");
+            document.write("Số tiền lương sau thuế là : " + luongRong + " đồng" + "<br>");
+        } else if (value1 > 7000000 && value1 < 1500000) {
+            thue = value1 * 10 / 100;
+            luongRong = value1 - thue;
+            document.write("Số tiền thuế phải trả là : " + thue + " đồng" + "<br>");
+            document.write("Số tiền lương sau thuế là : " + luongRong + " đồng" + "<br>");
+        } else if (value1 < 7000000) {
+            thue = value1 * 5 / 100;
+            luongRong = value1 - thue;
+            document.write("Số tiền thuế phải trả là : " + thue + " đồng" + "<br>");
+            document.write("Số tiền lương sau thuế là : " + luongRong + " đồng" + "<br>");
+        }
+    }
+</script>
 </body>
 </html>
