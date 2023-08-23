@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>ve hinh tam giac </title>
 </head>
 <body>
-$END$
+<script>
+    let h = +prompt("nhap vao chieu cao: ");
+    for (let i = 1; i <= h; i++) {
+        for (let j = 1 ; j <= h+i-1 ;j++){
+            if (j <=h-i){
+                document.write("&nbsp&nbsp");
+            }else {
+                document.write("*");
+            }
+        }
+        document.write("<br>");
+    }
+
+
+</script>
 </body>
 </html>
