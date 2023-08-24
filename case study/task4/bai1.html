@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>VXKH</title>
 </head>
 <body>
-$END$
+<script>
+    let str = prompt("nhập vào chuỗi của bạn");
+    let flag;
+    function makeItStandard(string) {
+        let arrStr = string.split(" ");
+        let arrFinal = [];
+        for (let i = 0; i < arrStr.length; i++) {
+            if (arrStr[i] !== "") {
+                arrFinal.push(arrStr[i]);
+            }
+        }
+        let longestWord = arrStr[0];
+        for (let i = 0; i < arrStr.length; i++) {
+            if (arrStr[i].length > longestWord.length) {
+                longestWord = arrStr[i];
+            }
+        }
+        flag = longestWord;
+        let strFinal = ""
+        for (let i = 0; i < arrFinal.length; i++) {
+            for (let j = 0; j < arrFinal[i].length; j++) {
+                if (j === 0) {
+                    strFinal = strFinal + arrFinal[i][j].toUpperCase();
+                } else {
+                    strFinal = strFinal + arrFinal[i][j].toLowerCase();
+                }
+            }
+            if (i < arrFinal.length - 1) {
+                strFinal = strFinal + " ";
+            }
+        }
+        return strFinal;
+    }
+
+    document.write("Chuỗi sau khi đổi: ", makeItStandard(str) + "<br>");
+    document.write("Từ dài nhất là: " + flag);
+</script>
 </body>
 </html>
