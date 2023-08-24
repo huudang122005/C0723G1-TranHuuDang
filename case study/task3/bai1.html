@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let input = +prompt("nhập vào độ dài của mảng:");
+    let arr1 = [];
+    for (let i = 0; i < input; i++) {
+        arr1[i] = +prompt("nhập vào giá trị thứ" + (i + 1) + " của mảng:");
+    }
+    let arr2 = [];
+    let sum = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        sum = sum + arr1[i];
+        arr2.push(sum);
+    }
+    document.write("màng ban đầu là : " + arr1 + "<br>");
+    document.write("mảng sau khi tính là : " + arr2);
+</script>
+</body>
+</html>

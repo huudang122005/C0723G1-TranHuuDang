@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let input1 = +prompt("nhập vào độ dài của mảng 1 ");
+    let numerators = [];
+    for (let i = 0; i < input1; i++) {
+        numerators[i] = +prompt("nhập vào phần tử thứ " + (i + 1) + "của mảng")
+    }
+    let input2 = +prompt("nhập vào độ dài của mảng 2 ");
+    let denominators = [];
+    for (let i = 0; i < input2; i++) {
+        denominators[i] = +prompt("nhập vào phần tử thứ " + (i + 1) + "của mảng")
+    }
+    let max = 0;
+    let division = [];
+    let flag;
+    for (let i = 0; i < numerators.length; i++) {
+        division[i] = numerators[i] / denominators[i];
+        if (max < division[i]) {
+            max = division[i];
+            flag = i
+        }
+    }
+    document.write(numerators[flag] + "/" + denominators[flag] + " là phân số lớn nhất , có chỉ số là: " + flag);
+
+</script>
+</body>
+</html>

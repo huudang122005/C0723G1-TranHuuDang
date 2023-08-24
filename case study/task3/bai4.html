@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<h1 style="color: darkblue">MENU</h1>
+<h2>1. Cafe - 18000 VNĐ</h2>
+<h2>2. Cam vắt - 15000 VNĐ</h2>
+<h2>3. Nước ép cà rốt - 15000 VNĐ</h2>
+<h2>4. Nước ép cà chua - 12000 VNĐ</h2>
+<h2>5. Nước lọc - 5000 VNĐ</h2>
+<h2>6. Nước dừa - 13000 VNĐ</h2>
+<button onclick="clickVao()" style="background: blue">Gọi món</button>
+<script>
+    function clickVao() {
+        let water = [1, 2, 3, 4, 5, 6];
+        let price = [18000, 15000, 15000, 12000, 5000, 13000];
+        let drink;
+        let amount;
+        let money = 0;
+        let sumAll = 0;
+        do {
+            drink = +prompt("nhập vào số thứ tự món bạn muốn gọi(nhập số 7 để kết thúc gọi món)");
+            for (let i = 0; i < water.length; i++) {
+                if (drink === water[i]) {
+                    amount = +prompt("nhập vào số lượng bạn muốn mua");
+                    money = amount * price[i];
+                    sumAll = sumAll + money;
+                    alert("Tổng số tiền phải trà là: " + sumAll + "VNĐ");
+                }
+            }
+            if (drink === 7) {
+                let xacNhan = confirm("bạn có chắc chắn muốn hủy ko!");
+                if (xacNhan === true) {
+                    alert("Tổng số tiền phải trà là: " + sumAll + "VNĐ");
+                    break;
+                } else {
+                    continue;
+                }
+            }
+            if (drink <= 0 || drink > 7) {
+                alert("món bạn gọi ko có trong menu vui lòng nhập lại món ");
+            } else if (isNaN(drink)) {
+                alert("ko hợp lệ")
+            }
+        } while (true);
+    }
+</script>
+</body>
+</html>
