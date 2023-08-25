@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        arr[i] = [];
+        for (let j = 0; j < 5; j++) {
+            arr[i][j] = +Math.floor(Math.random() * 20);
+        }
+    }
+    console.log(arr)
+    let arrPrime = [];
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (checkSoNguyenTo(arr[i][j])) {
+                arrPrime.push(arr[i][j])
+            }
+        }
+    }
+
+    console.log(arrPrime)
+
+    function checkSoNguyenTo(number) {
+        if (number < 2) {
+            return false
+        }
+        for (let i = 2; i < number; i++) {
+            for (let j = i; j <= i; j++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+        }
+        return true
+    }
+
+
+</script>
+</body>
+</html>

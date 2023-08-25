@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let input1 = +prompt("nhập vào độ dài của mảng m");
+    let input2 = +prompt("nhập vào độ dài của mảng n là mảng nằm bên trong m");
+    let arr = [];
+    let sum = 0;
+    for (let i = 0; i < input1 - 1; i++) {
+        arr[i] = [];
+        for (let j = 0; j < input2; j++) {
+            let input3 = +prompt("nhập vào phần tử thứ " + (j + 1) + "của mảng" + (i + 1));//sau khi nhập nó có dạng arr[i][j]
+            if (input3 % 2 === 0) {
+                sum += input3;
+            }
+        }
+    }
+    document.write("tổng các số chẵn trong ma trận có kích thước m*n là: " + sum);
+
+</script>
+</body>
+</html>

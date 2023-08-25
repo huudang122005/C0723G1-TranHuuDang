@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let str = "abcdeeghasfhaisjfhlkj";
+    let arrStr = str.split("");
+    let arrSort = arrStr.sort();
+    let cnt = 0;
+    for (let i = 0; i < arrSort.length; i++) {
+        if (arrSort[i] !== arrSort[i + 1]) {
+            cnt = cnt + 1;
+        }
+    }
+    document.write("số lượng ký tự khác nhau trong xâu đó là : " + cnt);
+</script>
+</body>
+</html>
