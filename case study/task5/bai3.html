@@ -5,6 +5,20 @@
     <title>bai3</title>
 </head>
 <body>
-
+<script>
+    let arr = [
+        [1, 9, 3, 4],
+        [5, 3, 2, 8]
+    ];
+    let max = arr[0][0];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (max < arr[i][j]) {
+                max = arr[i][j];
+            }
+        }
+    }
+    document.write("số lớn nhất trong mảng là: " + max);
+</script>
 </body>
 </html>
